@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+body[maskopen=true] {
+  overflow: hidden;
+}
+body[maskopen=true] #root > .app {
+  filter: blur(8px);
+}
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/*正常的未被访问过的链接*/
+a:link {
+  text-decoration: none;
+}
+/*已经访问过的链接*/
+a:visited {
+  text-decoration: none;
+}
+/*鼠标划过(停留)的链接*/
+a:hover {
+  text-decoration: none;
+}
+/* 正在点击的链接，鼠标在元素上按下还没有松开*/
+a:active {
+  text-decoration: none;
+}
+/* 获得焦点的时候 鼠标松开时显示的颜色*/
+a:focus {
+  text-decoration: none;
+}
+html {
+  font-size: 10px;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    width: 100%;
+    min-width: 1024px;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    line-height: 7rem;
+    padding: 0 8rem 0 2rem;
+    background: #FDFBF8;
+  }
+  .main .header > img {
+    height: 3rem;
+  }
+  .main .header .tab {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    min-width: 40rem;
+  }
+  .main .header .tab > div {
+    height: 100%;
+    position: relative;
+  }
+  .main .header .tab > div > a {
+    position: relative;
+    z-index: 1;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #5F5694;
+    white-space: nowrap;
+  }
+  .main .header .tab > div > img {
+    display: none;
+    height: 5rem;
+    position: absolute;
+    top: 1rem;
+  }
+  .main .header .tab > div:nth-child(1) > img {
+    left: 2rem;
+  }
+  .main .header .tab > div:nth-child(2) > img,
+  .main .header .tab > div:nth-child(3) > img,
+  .main .header .tab > div:nth-child(4) > img {
+    left: 6rem;
+  }
+  .main .header .tab > div:hover img,
+  .main .header .tab > div.selected img {
+    display: block;
+  }
+  .main .content {
+    height: calc(100% - 7rem);
+    overflow: auto;
+  }
+  .main .content img {
+    width: 100%;
+    min-height: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    width: 100%;
+    min-width: 300px;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .main .header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 7rem;
+    line-height: 7rem;
+    padding: 0 3rem;
+    background: #FDFBF8;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+  }
+  .main .header .menu {
+    height: 1.8rem;
+    cursor: pointer;
+  }
+  .main .header .logo {
+    height: 3.2rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .main .content {
+    height: calc(100% - 7rem);
+    overflow: auto;
+  }
+  .main .content img {
+    width: 100%;
+    min-height: 100%;
+  }
+  .main .content .nav {
+    width: 100%;
+    height: 100%;
+    background: #FDFBF8;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #5F5694;
+    padding: 3rem;
+  }
+  .main .content .nav li {
+    padding: 1.8rem;
+    border-bottom: 0.05rem solid #5F5694;
+  }
+  .main .content .nav li:last-child {
+    border-bottom: none;
+  }
+  .main .content .nav li > a {
+    color: #5F5694;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 320px) {
+  .main .header {
+    height: 5rem;
+    line-height: 5rem;
+  }
+  .main .header .menu {
+    height: 1.5rem;
+  }
+  .main .header .logo {
+    height: 2.5rem;
+  }
+  .main .content {
+    height: calc(100% - 5rem);
+  }
+  .main .content .nav {
+    font-size: 1.5rem;
+    padding: 3rem;
+  }
+  .main .content .nav li {
+    padding: 1.3rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .app .menu {
+    height: 1.8rem !important;
+    cursor: pointer;
+  }
+  .app .logo {
+    height: 3.2rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .app .content {
+    height: calc(100% - 7rem);
+  }
+  .app .content .nav {
+    font-size: 1.5rem;
+    padding: 3rem;
+  }
+  .app .content .nav li {
+    padding: 1.3rem;
+    border-bottom: 0.05rem solid #5F5694;
+  }
+  .app .content .nav li:last-child {
+    border-bottom: none;
+  }
+  .app .content .nav li > a {
+    color: #5F5694;
+  }
+}
+
+
+/*# sourceMappingURL=index.9ce1d9d.css.map*/
