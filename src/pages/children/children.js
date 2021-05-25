@@ -1,15 +1,5 @@
 import '../../common/css/com.less';
 import $ from 'jquery';
-import menuM from '../../images/button.png';
-import selected from '../../images/tab-selected.png';
-import logo from '../../images/logo@2x.png';
-import children from '../../images/children.png';
-import logoM from '../../images/logo-m.png';
-import homeM from '../../images/home-m.png';
-import childrenM from '../../images/children-m.png';
-import appM from '../../images/app-m.png';
-import aboutM from '../../images/about-m.png';
-import police from '../../images/police.png';
 
 window.$ = $
 window.jQuery = $
@@ -23,18 +13,18 @@ function IsApp () {
 }
 
 function dealApp () {
-  var homeContent = '<div class="imgContent"><img id="home" src="' + homeM + '" alt="home" /><img id="children" src="' + childrenM + '" alt="children" /><img id="app" src="' + appM + '" alt="app" /><img id="about" src="' + aboutM + '" alt="about" />' +
+  var homeContent = '<div class="imgContent"><img id="home" src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/home-m.png" alt="home" /><img id="children" src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/children-m.png" alt="children" /><img id="app" src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/app-m.png" alt="app" /><img id="about" src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/about-m.png" alt="about" />' +
     '<div class="footer">' +
     '<div class="footer-border"></div>' +
     '<div class="copyright">Copyright © 2021 Creamplay 保留所有权利。</div>' +
     '<div class="hrefs">' +
-    '<a href="https://beian.miit.gov.cn/#/Integrated/index">沪ICP备2021000596号-1</a> ｜ <img src="' + police + '" alt="">' +
+    '<a href="https://beian.miit.gov.cn/#/Integrated/index">沪ICP备2021000596号-1</a> ｜ <img src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/police.png" alt="">' +
     '<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011002005418">沪公安网备31011002005418号</a>' +
     '</div></div>' +
     '</div>';
   var menuContent = '<div class="nav hide"><ul><li name="首页"><a href="#home">首页</a></li><li name="儿童个护"><a href="#children">儿童个护</a></li><li name="稚造APP"><a href="#app">稚造APP</a></li><li name="关于我们"><a href="#about">关于我们</a></li></ul></div>';
   document.title = 'CreamPlay';
-  $('.header').html('<img class="menu" src="' + menuM + '" alt="home" /><img class="logo" src="' + logoM + '" alt="logo" />');
+  $('.header').html('<img class="menu" src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/button.png" alt="home" /><img class="logo" src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/logo-m.png" alt="logo" />');
   $('.main').addClass('app');
   $('.content').html(menuContent + homeContent);
   $('.menu').click(function () {
@@ -53,27 +43,27 @@ function dealApp () {
   });
 }
 function dealWeb () {
-  var headerContent = '<img src="' + logo + '" alt="logo" class="logo" />' +
+  var headerContent = '<img src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/logo@2x.png" alt="logo" class="logo" />' +
     '<div class="tab">' +
     '<div class="home">' +
-    '<a href="./">首页</a><img src="' + selected + '" alt="selected" />' +
+    '<a href="./">首页</a><img src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/tab-selected.png" alt="selected" />' +
     '</div>' +
     '<div class="children selected">' +
-    '<a href="#">儿童个护</a><img src="' + selected + '" alt="selected" />' +
+    '<a href="#">儿童个护</a><img src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/tab-selected.png" alt="selected" />' +
     '</div>' +
     '<div class="app">' +
-    '<a href="./app.html">稚造APP</a><img src="' + selected + '" alt="selected" />' +
+    '<a href="./app.html">稚造APP</a><img src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/tab-selected.png" alt="selected" />' +
     '</div>' +
     '<div class="about">' +
-    '<a href="./about.html">关于我们</a><img src="' + selected + '" alt="selected" />' +
+    '<a href="./about.html">关于我们</a><img src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/tab-selected.png" alt="selected" />' +
     '</div>' +
     '</div>';
-  var content = '<img src="' + children + '" alt="children" />' +
+  var content = '<img src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/children.png" alt="children" />' +
     '<div class="footer">' +
     '<div class="footer-border"></div>' +
     '<div class="copyright">Copyright © 2021 Creamplay 保留所有权利。</div>' +
     '<div class="hrefs">' +
-    '<a href="https://beian.miit.gov.cn/#/Integrated/index">沪ICP备2021000596号-1</a> ｜ <img src="' + police + '" alt="">' +
+    '<a href="https://beian.miit.gov.cn/#/Integrated/index">沪ICP备2021000596号-1</a> ｜ <img src="https://creamplay.oss-cn-hangzhou.aliyuncs.com/www/images/police.png" alt="">' +
     '<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011002005418">沪公安网备31011002005418号</a>' +
     '</div></div>';
   $('.main').removeClass('app');
